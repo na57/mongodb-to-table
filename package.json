@@ -1,0 +1,51 @@
+{
+  "name": "mongodb-to-table",
+  "version": "1.0.0",
+  "description": "A general-purpose MongoDB to 2D table mapping skill supporting flatten and array_expand modes",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.module.json",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "mongodb",
+    "table",
+    "mapping",
+    "flatten",
+    "csv",
+    "json",
+    "data-transformation"
+  ],
+  "author": "MongoDB to Table Mapping Skill",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/na57/mongodb-to-table"
+  },
+  "bugs": {
+    "url": "https://github.com/na57/mongodb-to-table/issues"
+  },
+  "homepage": "https://github.com/na57/mongodb-to-table#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
